@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #8f8f8f #252627;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  *::-webkit-scrollbar-track {
+    background: #252627;
   }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #8f8f8f;
+    border-radius: 20px;
+    border: 3px solid #252627;
+  }
+
+:root{
+    --primary: #e24b4b!important;
+    --bs-body-color: #adb5bd;
+    --bs-body-color-rgb: 173,181,189;
+    --bs-body-bg: #212529;
+    --bs-body-bg-rgb: 33,37,41;
+    --bs-emphasis-color: #f8f9fa;
+    --bs-emphasis-color-rgb: 248,249,250;
+    --bs-secondary-color: rgba(173, 181, 189, 0.75);
+    --bs-secondary-color-rgb: 173,181,189;
+    --bs-secondary-bg: #343a40;
+    --bs-secondary-bg-rgb: 52,58,64;
+    --bs-tertiary-color: rgba(173, 181, 189, 0.5);
+    --bs-tertiary-color-rgb: 173,181,189;
+    --bs-tertiary-bg: #2b3035;
+    --bs-tertiary-bg-rgb: 43,48,53;
+    --bs-emphasis-color: #fff;
+    --bs-primary-text: #6ea8fe;
+    --bs-secondary-text: #dee2e6;
+    --bs-success-text: #75b798;
+    --bs-info-text: #6edff6;
+    --bs-warning-text: #ffda6a;
+    --bs-danger-text: #ea868f;
+    --bs-light-text: #f8f9fa;
+    --bs-dark-text: #dee2e6;
+    --bs-primary-bg-subtle: #031633;
+    --bs-secondary-bg-subtle: #212529;
+    --bs-success-bg-subtle: #051b11;
+    --bs-info-bg-subtle: #032830;
+    --bs-warning-bg-subtle: #332701;
+    --bs-danger-bg-subtle: #2c0b0e;
+    --bs-light-bg-subtle: #343a40;
+    --bs-dark-bg-subtle: #1a1d20;
+    --bs-primary-border-subtle: #084298;
+    --bs-secondary-border-subtle: #495057;
+    --bs-success-border-subtle: #0f5132;
+    --bs-info-border-subtle: #055160;
+    --bs-warning-border-subtle: #664d03;
+    --bs-danger-border-subtle: #842029;
+    --bs-light-border-subtle: #495057;
+    --bs-dark-border-subtle: #343a40;
+    --bs-heading-color: #fff;
+    --bs-link-color: #6ea8fe;
+    --bs-link-hover-color: #9ec5fe;
+    --bs-link-color-rgb: 110,168,254;
+    --bs-link-hover-color-rgb: 158,197,254;
+    --bs-code-color: #e685b5;
+    --bs-border-color: #495057;
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+}
+canvas {
+    margin-left: 7%;
+    margin-top: 10px;
+}
+
+header {
+    background: var(--primary)!important;
+}
+
+#img-out {
+	margin-top: 13px;
+}
+
+body {
+    background: #0d1216;
+    height: 100vh;
+}
+#sidebarMenu {
+    overflow: auto;
+}
+
+.bg-new{
+    background: #252627;
+}
+
+.cards {
+    overflow: hidden;
+    cursor: pointer;
+    width: 600px;
+    border: none;
+    height: 600px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    background: #fff;
+    color:#000;
+    zoom: 60%; 
+    position: relative; 
+}
+
+
+.cards h1 {
+    font-size: 48px;
+    margin-bottom: 0px
+}
+
+.cards span {
+    font-size: 28px
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0;
+}
+
+.btnBlanco{
+    background:#000;
+    color: #fff;
+}
+
+.btnBlanco:hover{
+    color: #CCC;
+}
+
+div#contenido p:hover{
+    border: var(--primary) 1px outset;
+}
+
+div#contenido img:hover{
+    border: var(--primary) 1px outset;
+}
+
+
+
+.btnPrimary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    background: #fff;
+    color: #000;
+}
+
+.preset {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.preset:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.mostrar {
+    display: block;
+}
+
+.ocultar {
+    display: none;
+}
+
+.btnSidebar{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btnSidebar:hover{
+    border: 1px solid #000;
+    background: var(--primary);
+}
+
+.btnSidebar2{
+    border: 1px solid #000;
+    color: #fff;
+    background: var(--primary);
+}
+
+.btnSidebar2:hover{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#ejex {
+    width: 100%; height: 1px; background-color: transparent;z-index: 200; position: absolute; border-top: 1px solid transparent; border-bottom: 1px solid transparent;
+}
+
+#ejey {
+    width: 1px; height: 100%; background-color: transparent;z-index:  200; position: absolute; border-left: 1px solid transparent; border-right: 1px solid transparent;
+}
+
+#ejex:hover {
+    background-color: var(--primary);
+    color: var(--primary);
+}
+
+#ejey:hover {
+    background-color: var(--primary);
+    color: var(--primary);
+}
+
+#ejex {
+    transition: 0.2s ease-out;
+}
+
+#ejey {
+    transition: 0.2s ease-out;
+}
+
+.cssPadrecont{
+    height: 79vh;
+}
+
+.sidebarNavbar{
+    border-color: #000!important;background-color: #000000;
+}
+
+.menuIconos{
+    border-right: 2px solid #464646;
+}
+
+.headerEditor{
+    height: 60px;
+}
+
+.sombraBlanca{
+    box-shadow: 0px 7px 12px 5px #ffffff42;
+}
+
+.menu1 a.nav-link:hover {
+    background: #464646;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+  }
+
+  .offcanvas-backdrop.show {
+    display: none;
+    opacity: 0;
+}
+
+.texto{
+    color: #000;
 }
